@@ -15,5 +15,5 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag main:$(date +%s)
-           docker run main:$(date +%s) npm run test
+    - run: docker build . -t main:$(date +%s)
+    - run: docker run main:$(date +%s) npm run test

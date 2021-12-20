@@ -14,4 +14,5 @@ jobs:
       - name: Build the Docker image
         run: docker build -f Dockerfile.dev -t testing . 
       - name: launching test
-        run: docker run testing npm run test
+      - run: docker run -it testing npm run test
+      - run: q

@@ -12,5 +12,6 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Build the Docker image
-      - run: docker build -f Dockerfile.dev -t testing . 
-      - run: docker run testing npm run test
+        run: docker build -f Dockerfile.dev -t testing . 
+      - name: launching test
+        run: docker run testing npm run test
